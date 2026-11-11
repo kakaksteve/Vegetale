@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.form-container .txt-login-wrapper {
+    display: none;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 16px;
+    color: hsl(180, 6%, 90%);
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    min-width: 100%;
+    background: url("../media/pexels-enisahalidi-17735286.jpg") center no-repeat;
+    background-size: cover;
+    min-height: 100dvh; /*biar tidak mengecil kalau ada virtual floating keyboard*/
+    min-height: 100vh;
+    overflow-y: auto;
+    align-content: end;
+}
+
+.left-section-container {
+    display: none;
+}
+
+.form-container {
+    max-width: 100%;
+    height: 70vh;
+    border-radius: 2rem 2rem 0 0;
+    background-color: hsla(138, 41%, 16%, 0.72);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    color: hsl(180, 6%, 90%);
+}
+
+.fields-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.field-container {
+    width: 100%;
+    min-height: 2rem;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid #ccc; */
+}
+
+.field-container hr {
+    color: hsla(0, 0%, 50%, 1);
+}
+
+.input-text-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* height: fit-content; */
+    /* border: 1px solid #ccc; */
+    /* background-color: aqua; */
+}
+
+.input-text-container input {
+    appearance: none;
+    width: 100%;
+    background-color: transparent;
+    border: transparent;
+    font-family: inherit;
+    font-size: 1rem;
+    color: hsl(180, 6%, 90%);
+    /* background-color: red; */
+}
+
+.input-text-container input::placeholder {
+    color: hsla(0, 0%, 65%, 1);
+}
+
+.input-text-container input:focus {
+    outline: transparent;
+}
+
+.icon-container {
+    /* width: 3rem;
+    height: 100%; */
+    font-size: 1.5rem;
+    display: flex;
+    padding: 0.5rem;
+    /* margin: 0 auto; */
+    align-items: center;
+    justify-content: center;
+    color: hsla(0, 0%, 65%, 1);
+    /* padding: ; */
+    /* background-color: aqua; */
+}
+
+.button-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.btn-signup {
+    width: 100%;
+    min-height: 2.5rem;
+    appearance: none;
+    border: transparent;
+    background-color: hsl(137, 41%, 36%);
+    border-radius: 0.5rem;
+    font-size: inherit;
+    font-family: inherit;
+    color: #E3E6E6;
+}
+
+.separator {
+    display: flex;
+    width: 100%;
+    /* background-color: aqua; */
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: hsla(0, 0%, 65%, 1);
+}
+
+.separator hr {
+    height: 1px;
+    width: 100%;
+    color: hsla(0, 0%, 50%, 1);
+}
+
+.btn-login {
+    width: 100%;
+    min-height: 2.5rem;
+    appearance: none;
+    border: 2px solid hsla(0, 0%, 65%, 1);
+    background-color: transparent;
+    border-radius: 0.5rem;
+    font-size: inherit;
+    font-family: inherit;
+    color: #E3E6E6;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background: url("../media/stocksnap-house-2606818_1920.jpg") center no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        padding: 4rem 4rem;
+    }
+    .main-container {
+        background-color: hsla(210, 11%, 15%, 0.32);
+        border-radius: 2rem;
+        display: flex;
+        /* background-color: aliceblue; */
+        overflow: hidden;
+        backdrop-filter: blur(4px);
+        width: 100%;
+        height: 100%;
+        /* margin: 4rem 2rem; */
+    }
+    .left-section-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 6rem 8rem;
+    }
+    .left-section-container .text-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .text-wrapper h1 {
+        font-size: 3rem;
+    }
+    .text-wrapper p {
+        font-size: 1.5rem;
+    }
+    .form-container {
+        width: 100%;
+        backdrop-filter: none;
+        border-radius: 0;
+        height: 100%;
+        align-items: start;
+        padding: 6rem 8rem;
+    }
+    .form-container h1 {
+        font-size: 2rem;
+    }
+    .fields-wrapper {
+        gap: 3rem;
+    }
+    .field-container input {
+        font-size: 1.5rem;
+    }
+    .icon-container {
+        font-size: 2rem;
+        /* width: 3rem; */
+        /* height: 3rem; */
+        /* font-size: 2rem; */
+    }
+    .btn-signup {
+        width: fit-content;
+        height: fit-content;
+        padding: 0.5rem 3rem;
+        font-size: 1.5rem;
+    }
+    .form-container .separator, .btn-login {
+        display: none;
+    }
+    .form-container .txt-login-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .txt-login-wrapper a {
+        font-style: normal;
+        font-variant: none;
+        color: hsl(137, 41%, 48%);
+    }
+}
+
+/* ICONS */
+.bx--user {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M12 2a5 5 0 1 0 5 5a5 5 0 0 0-5-5m0 8a3 3 0 1 1 3-3a3 3 0 0 1-3 3m9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.eva--email-outline {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='black' d='M19 4H5a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3m-.67 2L12 10.75L5.67 6ZM19 18H5a1 1 0 0 1-1-1V7.25l7.4 5.55a1 1 0 0 0 .6.2a1 1 0 0 0 .6-.2L20 7.25V17a1 1 0 0 1-1 1'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+.ph--lock-bold {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='black' d='M208 76h-28V56a52 52 0 0 0-104 0v20H48a20 20 0 0 0-20 20v112a20 20 0 0 0 20 20h160a20 20 0 0 0 20-20V96a20 20 0 0 0-20-20M100 56a28 28 0 0 1 56 0v20h-56Zm104 148H52V100h152Zm-60-52a16 16 0 1 1-16-16a16 16 0 0 1 16 16'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}

@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+html {
+    font-size: 16px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    max-width: 100%;
+    line-height: 1.6;
+    color: #212529; /*CHARCOAL*/
+    background-color: hsl(180, 6%, 90%); /*Off-white*/
+    overflow: visible;
+}
+
+/* NAVIGATION BAR SECTION */
+.navbar {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    background-color: #D8E2DC; /*SAGE MIST*/
+    padding: 0.5rem 4rem; /*padding: <atas-bawah> <kiri-kanan>;*/
+    z-index: 100;
+}
+.nav_links {
+    display: flex;
+    font-weight: 500;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 48rem;
+    width: 100%;
+    list-style: none;
+    font-size: 1.2rem;
+}
+.nav_links a {
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;
+}
+.logo_guwe {
+    font-family: 'Outfit', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #2E6F40; /*BOTANICAL GREEN*/
+}
+
+
+
+.tombol_ijo { /*tag button gak mewarisi sifat, jadi perlu ditambahin inherit*/
+    display: flex;
+    background-color: #2E6F40;
+    padding: 10px 16px;
+    gap: 8px;
+    width: fit-content;
+    border-radius: 10px;
+    color: #E3E6E6;
+    border: none;
+    /*inherit fungsinya buat mewarisi sifat yang ada di body*/
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    box-shadow: 0 3px 5px 0 #00000038;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/herobg.jpg) center no-repeat;
+    background-size: cover;
+    display: flex;
+    padding: 4rem 10rem;
+    padding-top: 10rem;
+    flex-direction: column;
+    gap: 8rem;
+}
+.hero_text_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    gap: 2rem;
+}
+.hero_text {
+    font-weight: 600;
+    font-size: 3rem;
+    max-width: 48rem;
+    color: #1e542d;
+}
+.hero_sub {
+    font-size: 1.5rem;
+    color: #206c35;
+    font-weight: 500;
+}
+.tombol_ijo--hero {
+    font-size: 1.2rem;
+}
+.grup_kartu {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.card {
+    display: flex;
+    flex: 1 1 16rem;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem 0rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #D8E2DC;
+    border-radius: 15px;
+    box-shadow: 0 10px 5px 0 #00000038; /*box-shadow: <x> <y> <blur-radius> <spread-radius> <color> <inset>*/
+}
+.card_highlight {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    color: #2E6F40;
+}
+.card_sub {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+/* ABOUT US SECTION */
+
+.about_me {
+    display: flex;
+    flex-direction: column;
+    background-color: hsla(180, 6%, 90%);
+    padding: 4rem 16rem;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+.section_title {
+    display: flex;
+    width: 512px;
+    height: fit-content;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.section_title .rectangle {
+    background-color: #3f9858;
+    height: 4px;
+    width: 100%;
+}
+.about_me .wrapper_konten {
+    display: flex;
+    gap: 2rem;
+}
+.about_me .wrapper_text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.about_me .misi {
+    color: #2E6F40;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.about_me .konten_image {
+    max-height: 26rem;
+    height: 100%;
+    width: auto;
+    border-radius: 2rem;
+}
+
+
+/* PRODUK UNGGULAN SECTION */
+
+.produk_unggulan {
+    display: flex;
+    flex-direction: column;
+    background-color: hsla(180, 6%, 85%);
+    padding: 4rem 8rem;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.produk_unggulan .product_wrapper {
+    display: flex;
+    width: 100%;
+    gap: 4rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.produk_unggulan .product_card {
+    flex: 1 1 16rem;
+    aspect-ratio: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #58626d;
+}
+
+/* FOOTER SECTION */
+
+.sikil {
+    display: flex;
+    padding: 1rem 4rem;
+    padding-bottom: 2rem;
+    justify-content: space-between;
+    gap: 4rem;
+    background-color: #060E08;
+}
+.sikil .right_section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 48rem;
+    width: 100%;
+}
+.sikil .left_section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#logo_sikil {
+    color: #3f9858;
+}
+.link_sikil_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    gap: 1rem;
+    font-weight: 600;
+    color: #58626d;
+}
+.link_sikil {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    color: #3f9858;
+    gap: 0.5rem;
+    /* font-weight: ; */
+}
+.link_sikil a {
+    text-decoration: none;
+    font-weight: normal;
+    color: #E3E6E6;
+}
+.ci--external-link {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='black' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 5H8.2c-1.12 0-1.68 0-2.108.218a2 2 0 0 0-.874.874C5 6.52 5 7.08 5 8.2v7.6c0 1.12 0 1.68.218 2.108a2 2 0 0 0 .874.874c.427.218.987.218 2.105.218h7.606c1.118 0 1.677 0 2.104-.218c.377-.192.683-.498.875-.874c.218-.428.218-.987.218-2.105V14m1-5V4m0 0h-5m5 0l-7 7'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        width: 100%;
+        padding: 0.5rem 1.5rem;
+    }
+    .hero {
+        width: 100%;
+        padding: 1rem 1rem;
+    }
+}
