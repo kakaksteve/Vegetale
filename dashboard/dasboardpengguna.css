@@ -1,0 +1,565 @@
+/* ==========================================
+   RESET & DASAR TAMPILAN
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f6f8;
+    color: #333333;
+}
+
+/* Container Pembungkus Utama Layout */
+.app-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 25px;
+    padding: 0 15px;
+}
+
+/* ==========================================
+   SIDEBAR KIRI
+   ========================================== */
+.sidebar {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+/* Box Umum Sidebar (Warna Hijau Tua) */
+.sidebar-box {
+    background-color: #2b6a4a;
+    border-radius: 12px;
+    padding: 15px;
+    color: #ffffff;
+}
+
+/* Box Avatar & Menu Burger */
+.profile-box {
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2b6a4a;
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+.burger-menu {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Box Navigasi Menu */
+.menu-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+.nav-btn {
+    width: 100%;
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #333333;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover, .nav-btn.active {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-btn .icon-btn {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Tombol Keluar Akun */
+.btn-logout {
+    background-color: #2b6a4a;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    transition: background-color 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: #1e4b34;
+}
+
+/* ==========================================
+   KONTEN UTAMA
+   ========================================== */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Header Utama */
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.badge-tag {
+    background-color: #2b6a4a;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.welcome-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #666666;
+    margin-top: 4px;
+}
+
+.btn-back {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+}
+
+/* ==========================================
+   GRID STATISTIK (3 KOTAK)
+   ========================================== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.stat-card {
+    background-color: #e4ece7;
+    border: 1px solid #c8d6cd;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-icon-box {
+    width: 28px;
+    height: 24px;
+    background-color: #2b6a4a;
+    border-radius: 6px;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.stat-label {
+    font-size: 13px;
+    color: #333333;
+    font-weight: 500;
+}
+
+/* ==========================================
+   CARD PESANAN AKTIF
+   ========================================== */
+.order-status-card {
+    background-color: #e4ece7;
+    border: 1px solid #c8d6cd;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.order-header-tags {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/*sedang dikirim*/
+.tag-outline {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 4px 15px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+.tag-pill {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 4px 15px;
+    border-radius: 15px;
+    font-size: 11px;
+    color: #555;
+}
+
+/* Detail Produk */
+.order-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.product-img {
+    width: 70px;
+    height: 65px;
+    background-color: #d4e3d9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2b6a4a;
+    font-size: 30px;
+}
+
+.category-text {
+    font-size: 10px;
+    color: #777;
+}
+
+.product-text h3 {
+    font-size: 15px;
+    margin: 2px 0;
+}
+
+.product-text p {
+    font-size: 11px;
+    color: #666;
+}
+
+.price-info {
+    text-align: right;
+}
+
+.price-label {
+    font-size: 11px;
+    color: #555;
+}
+
+.price-amount {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+/* Tracker Progres Pengiriman */
+.progress-tracker {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 10px 15px 10px;
+}
+
+.progress-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #2b6a4a;
+    z-index: 1;
+    transform: translateY(-50%);
+}
+
+.step {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #e4ece7;
+    border: 2px solid #2b6a4a;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #ffffff;
+}
+
+.step.completed {
+    background-color: #2b6a4a;
+}
+
+.step.active {
+    background-color: #2b6a4a;
+    width: 26px;
+    height: 26px;
+}
+
+.delivery-estimate {
+    display: inline-block;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 6px 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* ==========================================
+   GRID DUA KOLOM (RIWAYAT & ALAMAT)
+   ========================================== */
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Card Riwayat & Alamat */
+.history-card, .address-card {
+    background-color: #e4ece7;
+    border: 1px solid #c8d6cd;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-header, .address-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.header-icon-box {
+    width: 40px;
+    height: 35px;
+    border: 1px solid #777;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.history-header h2, .address-header h2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* List Item Riwayat */
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.history-item {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item-img {
+    width: 40px;
+    height: 40px;
+    background-color: #d4e3d9;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2b6a4a;
+}
+
+.item-desc h4 {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.item-desc p {
+    font-size: 9px;
+    color: #777;
+}
+
+.item-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 3px;
+}
+
+.item-price {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.btn-buy-again {
+    background-color: #ffffff;
+    border: 1px solid #777;
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* Tombol Bawah Card */
+.btn-view-more, .btn-edit-address {
+    margin-top: 15px;
+    background-color: #ffffff;
+    border: 1px solid #777;
+    padding: 8px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+
+/* Box Alamat Kosong/Peta */
+.address-box {
+    background-color: #e0e0e0;
+    border: 1px solid #b5b5b5;
+    border-radius: 8px;
+    height: 150px;
+    flex: 1;
+}
+
+/* ==========================================
+   FOOTER UTAMA
+   ========================================== */
+.main-footer {
+    background-color: #0b0f0d;
+    color: #ffffff;
+    margin-top: 40px;
+    padding: 40px 0 15px 0;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.footer-logo-box {
+    width: 150px;
+    height: 60px;
+    border: 1px solid #555;
+    position: relative;
+}
+
+/* Membuat efek tanda X pada placeholder logo */
+.x-mark::before, .x-mark::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #555;
+}
+.x-mark::before { transform: rotate(20deg); }
+.x-mark::after { transform: rotate(-20deg); }
+
+.footer-col h4 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #dddddd;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+    color: #aaaaaa;
+    text-decoration: none;
+    font-size: 12px;
+    transition: color 0.2s;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 10px;
+    color: #555555;
+    border-top: 1px solid #1a221e;
+    margin-top: 30px;
+    padding-top: 15px;
+}
