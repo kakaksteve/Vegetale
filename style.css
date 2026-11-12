@@ -54,8 +54,6 @@ body {
     color: #2E6F40; /*BOTANICAL GREEN*/
 }
 
-
-
 .tombol_ijo { /*tag button gak mewarisi sifat, jadi perlu ditambahin inherit*/
     display: flex;
     background-color: #2E6F40;
