@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Akun Desktop - Vegetale</title>
+    <!-- Menghubungkan ke file CSS eksternal -->
+    <link rel="stylesheet" href="dasboardpengguna.css">
+    <!-- Menggunakan Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="dashboardpengguna.js"></script>
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Sidebar Kiri -->
+        <aside class="sidebar">
+            <!-- Box Profil Atas -->
+            <div class="sidebar-box profile-box">
+                <div class="avatar-circle">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="burger-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <!-- Box Menu Navigasi -->
+            <div class="sidebar-box menu-box">
+                <button class="nav-btn active" onclick="setActive(this)">
+                    <i class="fa-regular fa-square icon-btn"></i> ringkasan akun
+                </button>
+                <button class="nav-btn" onclick="setActive(this)">
+                    <i class="fa-regular fa-square icon-btn"></i> pesanan dan pengiriman
+                </button>
+                <button class="nav-btn" onclick="setActive(this)">
+                    <i class="fa-regular fa-square icon-btn"></i> alamat pengiriman
+                </button>
+                <button class="nav-btn" onclick="setActive(this)">
+                    <i class="fa-regular fa-square icon-btn"></i> keranjang
+                </button>
+            </div>
+
+            <!-- Tombol Keluar Akun -->
+            <button class="btn-logout" onclick="logout()">keluar akun</button>
+        </aside>
+
+        <!-- Konten Utama -->
+        <main class="main-content">
+            <!-- Header Konten -->
+            <header class="content-header">
+                <div>
+                    <span class="badge-tag">Ruang Hijau Personal</span>
+                    <h1 class="welcome-title">Selamat Datang .............</h1>
+                    <p class="subtitle">Kebun Indoor Anda Dalam Kondisi Optimal. Satu Pesanan Tanaman Siap Tiba Di Rumah Anda</p>
+                </div>
+                <button class="btn-back" title="Kembali">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+            </header>
+
+            <!-- Grid Stat Cards (3 Kotak Info Utama) -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="card-icon-box"></div>
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Tanaman Di Rawat</div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-icon-box"></div>
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Pesanan Berjalan</div>
+                </div>
+                <div class="stat-card">
+                    <div class="card-icon-box"></div>
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Disimpan Di Keranjang</div>
+                </div>
+            </section>
+
+            <!-- Card Status Pesanan Aktif -->
+            <section class="order-status-card">
+                <div class="order-header-tags">
+                    <span class="tag-outline"><i class="fa-regular fa-square"></i> Pesanan Aktif</span>
+                    <span class="tag-pill">Sedang Dikirim</span>
+                </div>
+
+                <div class="order-detail">
+                    <div class="product-info">
+                        <!-- Placeholder Gambar Tanaman -->
+                        <div class="product-img">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <div class="product-text">
+                            <span class="category-text">Tanaman Indoor Koleksi</span>
+                            <h3>Tanaman Janda Bolong</h3>
+                            <p>Tanaman Janda Bolong 1 Item</p>
+                        </div>
+                    </div>
+                    <div class="price-info">
+                        <span class="price-label">Total Pembayaran :</span>
+                        <div class="price-amount">Rp 50.000</div>
+                    </div>
+                </div>
+
+                <!-- Tracker Progres Pengiriman -->
+                <div class="progress-tracker">
+                    <div class="progress-line"></div>
+                    <div class="step completed"><i class="fa-solid fa-check"></i></div>
+                    <div class="step completed"><i class="fa-solid fa-check"></i></div>
+                    <div class="step active"><i class="fa-solid fa-truck"></i></div>
+                    <div class="step"></div>
+                </div>
+
+                <div class="delivery-estimate">
+                    Estimasi Tiba 31 Desember 2026
+                </div>
+            </section>
+
+            <!-- Grid 2 Kolom (Riwayat & Alamat) -->
+            <section class="bottom-grid">
+                <!-- Card Riwayat Pembelian -->
+                <div class="history-card">
+                    <div class="history-header">
+                        <div class="header-icon-box">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </div>
+                        <h2>Riwayat Pembelian</h2>
+                    </div>
+
+                    <div class="history-list">
+                        <!-- Item 1 -->
+                        <div class="history-item">
+                            <div class="item-img">
+                                <i class="fa-solid fa-tree"></i>
+                            </div>
+                            <div class="item-desc">
+                                <h4>pohon bonsai mini</h4>
+                                <p>paket anda telah diterima</p>
+                            </div>
+                            <div class="item-action">
+                                <span class="item-price">Rp 250.000</span>
+                                <button class="btn-buy-again">Beli Lagi</button>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="history-item">
+                            <div class="item-img">
+                                <i class="fa-solid fa-tree"></i>
+                            </div>
+                            <div class="item-desc">
+                                <h4>pohon bonsai mini</h4>
+                                <p>paket anda telah diterima</p>
+                            </div>
+                            <div class="item-action">
+                                <span class="item-price">Rp 250.000</span>
+                                <button class="btn-buy-again">Beli Lagi</button>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="history-item">
+                            <div class="item-img">
+                                <i class="fa-solid fa-tree"></i>
+                            </div>
+                            <div class="item-desc">
+                                <h4>pohon bonsai mini</h4>
+                                <p>paket anda telah diterima</p>
+                            </div>
+                            <div class="item-action">
+                                <span class="item-price">Rp 250.000</span>
+                                <button class="btn-buy-again">Beli Lagi</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-view-more">Lihat Selengkapnya</button>
+                </div>
+
+                <!-- Card Alamat Pengiriman -->
+                <div class="address-card">
+                    <div class="address-header">
+                        <div class="header-icon-box"></div>
+                        <h2>Alamat Pengiriman</h2>
+                    </div>
+                    
+                    <div class="address-box">
+                        <!-- Area kosong untuk alamat / peta -->
+                    </div>
+
+                    <button class="btn-edit-address">Edit Alamat</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer Sistem -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <!-- Box Logo Footer (Placeholder X) -->
+            <div class="footer-logo-box">
+                <div class="x-mark"></div>
+            </div>
+
+            <!-- Kolom Navigasi -->
+            <div class="footer-col">
+                <h4>Navigasi</h4>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Katalog</a></li>
+                    <li><a href="#">Forum</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom Aide (Bantuan) -->
+            <div class="footer-col">
+                <h4>Aide</h4>
+                <ul>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom Sosial -->
+            <div class="footer-col">
+                <h4>Sosial</h4>
+                <ul>
+                    <li><a href="#">Kontak Kami</a></li>
+                    <li><a href="#">WhatsApp</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Lokasi Kami</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; Vegetale by Farhan & Aryasatya. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Menghubungkan ke file JS eksternal -->
+    <script src="script.js"></script>
+</body>
+</html>
